@@ -125,6 +125,21 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
   .project:hover,.gemini-card:hover,.btn:hover{transform:none}
   .carousel-image:hover{transform:none;box-shadow:0 10px 26px #102f5320}
 }
+
+/* Liens d’action et fiches de détails des projets */
+.project-cta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;padding:12px 14px;min-height:46px;border-radius:13px;background:#edf7ff;border:1px solid #d6eafa;color:#1b5e9c;font-size:13px;font-weight:850;text-decoration:none;transition:background .2s ease,transform .2s ease,border-color .2s ease}
+.project-cta:hover{background:#dff2ff;border-color:#9ed5f4;transform:translateY(-2px)}
+.project-cta span{font-size:18px}
+.project-details-section{background:#fff;border-top:1px solid var(--line)}
+.project-details-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.project-detail{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start;padding:22px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(135deg,#fff,#f8fbff);scroll-margin-top:90px}
+.detail-icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;font-size:23px}
+.project-detail h3{margin:0 0 8px;font-size:21px}
+.project-detail p{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.7}
+.detail-back{font-size:13px;font-weight:800;color:#246bb0;text-decoration:none}
+.detail-back:hover{text-decoration:underline}
+.project{scroll-margin-top:90px}
+@media(max-width:760px){.project-cta{min-height:48px;font-size:14px}.project-detail{padding:17px;grid-template-columns:42px 1fr;gap:12px}.detail-icon{width:40px;height:40px;border-radius:13px}.project-detail h3{font-size:19px}}
 </style>
 </head>
 <body>
@@ -165,7 +180,7 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
   <section id="projets" style="background:#edf4fa"><div class="wrap">
     <div class="section-head"><div class="eyebrow">En développement</div><h2>D’autres idées prennent forme.</h2><p>Ces projets sont présentés pour donner un aperçu de l’univers GyroRider Studio. Ils ne sont pas encore proposés au téléchargement.</p></div>
     <div class="projects">
-      <article class="project project-speed">
+      <article class="project project-speed" id="projet-speed">
         <div class="project-heading"><div class="project-icon speed-icon">⚡</div><div><div class="project-kicker">ANDROID · CONDUITE</div><h3>GyroRider Speed</h3></div></div>
         <div class="carousel project-carousel" data-carousel aria-label="Captures d’écran de GyroRider Speed">
           <img class="carousel-image" src="gyroriderspeed/interfaces.PNG" alt="Interface de GyroRider Speed">
@@ -174,22 +189,31 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
         </div>
         <p>Un compagnon de trajet en préparation, avec interface de conduite, GPS et réglages personnalisables.</p>
         <div class="project-tags"><span>GPS</span><span>Trajets</span><span>Paramètres</span></div>
-        <span class="status">En développement</span>
+        <span class="status">En développement</span><a class="project-cta" href="#details-speed">Découvrir GyroRider Speed <span aria-hidden="true">↗</span></a>
       </article>
-      <article class="project">
+      <article class="project" id="projet-recapture">
         <div class="project-heading"><div class="project-icon recapture-icon">🗺️</div><div><div class="project-kicker">ANDROID · SOUVENIRS</div><h3>Recapture</h3></div></div>
         <div class="project-art recapture-art" aria-hidden="true"><span>📍</span><span>＋</span><span>▣</span><span>♫</span></div>
         <p>Garde une trace de tes aventures en réunissant le parcours, les photos, les vidéos et la musique dans un même souvenir.</p>
         <div class="project-tags"><span>Carte</span><span>Photos & vidéos</span><span>Musique</span></div>
-        <span class="status">En développement</span>
+        <span class="status">En développement</span><a class="project-cta" href="#details-recapture">Découvrir Recapture <span aria-hidden="true">↗</span></a>
       </article>
-      <article class="project">
+      <article class="project" id="projet-iptvcar">
         <div class="project-heading"><div class="project-icon iptv-icon">▶</div><div><div class="project-kicker">ANDROID AUTO · MULTIMÉDIA</div><h3>IPTVCar</h3></div></div>
         <div class="project-art iptv-art" aria-hidden="true"><span>▰</span><span>▶</span><span>▰</span></div>
         <p>Une expérimentation pour explorer l’affichage multimédia en voiture, en tenant compte des restrictions de compatibilité et de sécurité.</p>
         <div class="project-tags"><span>Prototype</span><span>Compatibilité</span></div>
-        <span class="status status-experimental">Expérimental</span>
+        <span class="status status-experimental">Expérimental</span><a class="project-cta" href="#details-iptvcar">Découvrir IPTVCar <span aria-hidden="true">↗</span></a>
       </article>
+    </div>
+  </div></section>
+
+  <section id="details-projets" class="project-details-section"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">En savoir plus</div><h2>Les projets, un peu plus en détail.</h2><p>Voici ce que chaque projet cherche à accomplir. Les fonctions peuvent évoluer pendant le développement.</p></div>
+    <div class="project-details-grid">
+      <article class="project-detail" id="details-speed"><span class="detail-icon speed-icon">⚡</span><div><h3>GyroRider Speed</h3><p>Un compagnon de trajet pour suivre les sorties, consulter les informations GPS et personnaliser l’expérience de conduite. Le projet est encore en développement.</p><a href="#projet-speed" class="detail-back">Retour à la carte du projet ↑</a></div></article>
+      <article class="project-detail" id="details-recapture"><span class="detail-icon recapture-icon">🗺️</span><div><h3>Recapture</h3><p>L’objectif est de réunir sur une même aventure la carte du parcours, les photos, les vidéos et la musique, puis de revoir ses souvenirs dans un récapitulatif cohérent. Le projet est en développement.</p><a href="#projet-recapture" class="detail-back">Retour à la carte du projet ↑</a></div></article>
+      <article class="project-detail" id="details-iptvcar"><span class="detail-icon iptv-icon">▶</span><div><h3>IPTVCar</h3><p>Un prototype qui explore les possibilités multimédias en voiture. La compatibilité dépend de la plateforme et les exigences de sécurité en conduite restent prioritaires. Le projet est expérimental.</p><a href="#projet-iptvcar" class="detail-back">Retour à la carte du projet ↑</a></div></article>
     </div>
   </div></section>
   <section class="closing" id="contact"><div class="wrap closing-inner"><div><h2>Des applications créées avec passion.</h2><p>Gratuites pour tous. D’autres projets arriveront lorsqu’ils seront prêts.</p></div><a class="btn btn-primary" href="horn.html">Découvrir GyroRider Horn ↑</a></div></section>
@@ -355,4 +379,11 @@ if(mobileMenuToggle&&primaryNav){
 
 })();
 </script>
+
+/* Localized project-detail copy */
+document.addEventListener('gyrolanguagechange',function(event){const en=event.detail.lang==='en';const copy=en?{
+'.project-speed .project-cta':'Discover GyroRider Speed <span aria-hidden="true">↗</span>','#projet-recapture .project-cta':'Discover Recapture <span aria-hidden="true">↗</span>','#projet-iptvcar .project-cta':'Discover IPTVCar <span aria-hidden="true">↗</span>','#details-projets .section-head .eyebrow':'Learn more','#details-projets .section-head h2':'A closer look at the projects.','#details-projets .section-head p':'Here is what each project aims to do. Features may change during development.','#details-speed h3':'GyroRider Speed','#details-speed p':'A ride companion to track outings, view GPS information and customize the riding experience. The project is still in development.','#details-recapture h3':'Recapture','#details-recapture p':'The goal is to bring the route map, photos, videos and music together in one adventure, then revisit memories in a coherent recap. The project is in development.','#details-iptvcar h3':'IPTVCar','#details-iptvcar p':'A prototype exploring in-car multimedia possibilities. Compatibility depends on the platform, and driving safety requirements remain a priority. The project is experimental.'
+}: {
+'.project-speed .project-cta':'Découvrir GyroRider Speed <span aria-hidden="true">↗</span>','#projet-recapture .project-cta':'Découvrir Recapture <span aria-hidden="true">↗</span>','#projet-iptvcar .project-cta':'Découvrir IPTVCar <span aria-hidden="true">↗</span>','#details-projets .section-head .eyebrow':'En savoir plus','#details-projets .section-head h2':'Les projets, un peu plus en détail.','#details-projets .section-head p':'Voici ce que chaque projet cherche à accomplir. Les fonctions peuvent évoluer pendant le développement.','#details-speed h3':'GyroRider Speed','#details-speed p':'Un compagnon de trajet pour suivre les sorties, consulter les informations GPS et personnaliser l’expérience de conduite. Le projet est encore en développement.','#details-recapture h3':'Recapture','#details-recapture p':'L’objectif est de réunir sur une même aventure la carte du parcours, les photos, les vidéos et la musique, puis de revoir ses souvenirs dans un récapitulatif cohérent. Le projet est en développement.','#details-iptvcar h3':'IPTVCar','#details-iptvcar p':'Un prototype qui explore les possibilités multimédias en voiture. La compatibilité dépend de la plateforme et les exigences de sécurité en conduite restent prioritaires. Le projet est expérimental.'
+};for(const [selector,value] of Object.entries(copy)){const el=document.querySelector(selector);if(el)el.innerHTML=value;}document.querySelectorAll('.detail-back').forEach((el,i)=>el.textContent=en?'Back to project card ↑':'Retour à la carte du projet ↑');});
 </body></html>
