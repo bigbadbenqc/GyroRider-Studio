@@ -47,6 +47,24 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 .features{gap:12px}
 .feature{border:1px solid #e0ebf5;background:linear-gradient(145deg,#f7fbff,#edf5fc);padding:14px;border-radius:15px}
 @media(max-width:760px){#horn{padding:38px 0 52px}.hero{padding-top:48px!important}.app-card{padding:16px;border-radius:22px}.features{grid-template-columns:1fr 1fr;gap:8px}.feature{font-size:12px;padding:11px}}
+
+/* Effets visuels plus visibles */
+.hero{isolation:isolate}
+.hero:before{content:"";position:absolute;inset:-25% -10%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 72% 35%,#42c8ff45 0,transparent 32%),radial-gradient(ellipse at 22% 75%,#426bff38 0,transparent 35%);animation:hornGlow 8s ease-in-out infinite alternate}
+@keyframes hornGlow{from{transform:translate3d(-1%,0,0) scale(1);opacity:.65}to{transform:translate3d(1.5%,-1%,0) scale(1.08);opacity:1}}
+.hero h1{text-shadow:0 4px 28px #72d6f62b}
+.btn{transition:transform .22s ease,box-shadow .22s ease,filter .22s ease}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.08)}
+.btn-primary:hover{box-shadow:0 16px 34px #3b82f666}
+.app-card{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.app-card:hover{border-color:#a9d9f4;box-shadow:0 28px 70px #17385a20}
+.horn-image-link{border-radius:18px}
+.horn-image{transition:transform .28s ease,box-shadow .28s ease,filter .28s ease}
+.horn-image:hover{transform:scale(1.025) translateY(-3px);filter:saturate(1.08);box-shadow:0 24px 48px #102f5333}
+.feature{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.feature:hover{transform:translateY(-3px);border-color:#9bdcf4;box-shadow:0 10px 22px #3178c91a}
+@media(prefers-reduced-motion:reduce){.hero:before{animation:none}.btn,.app-card,.horn-image,.feature{transition:none}.btn:hover,.horn-image:hover,.feature:hover{transform:none}}
+
 </style>
 </head><header class="topbar"><div class="wrap nav">
   <div class="brand"><div class="mark">✦</div><span>GyroRider <span style="color:#79dcf6">Studio</span></span></div>
