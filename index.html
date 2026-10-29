@@ -80,12 +80,13 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 @media(max-width:900px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}.project-speed{grid-column:1/-1}.project-speed .project-carousel .carousel-image{height:280px}}
 @media(max-width:760px){.projects{grid-template-columns:1fr}.project-speed{grid-column:auto}.project-speed .project-carousel .carousel-image{height:250px}.project-art{min-height:110px}}
 
+.lang-toggle{flex:0 0 auto;border:1px solid #72d6f677;background:#ffffff0b;color:#e9f7ff;border-radius:12px;padding:9px 12px;font-size:12px;font-weight:900;letter-spacing:.8px;cursor:pointer;transition:background .2s ease,transform .2s ease}.lang-toggle:hover{background:#72d6f622;transform:translateY(-1px)}@media(max-width:760px){.nav{gap:10px}.lang-toggle{margin-left:auto;padding:8px 10px}}
 </style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
   <div class="brand"><div class="mark" aria-label="Logo GyroRider Studio">GR</div><span>GyroRider <span style="color:#79dcf6">Studio</span></span></div>
-  <nav class="navlinks"><a href="horn.html">GyroRider Horn</a><a href="#projets">Nos projets</a><a href="#concepts-gemini">Concepts visuels</a><a href="#contact">À propos</a></nav>
+  <nav class="navlinks"><a href="horn.html">GyroRider Horn</a><a href="#projets">Nos projets</a><a href="#concepts-gemini">Concepts visuels</a><a href="#contact">À propos</a></nav><button class="lang-toggle" type="button" id="langToggle" aria-label="Switch to English">EN <span aria-hidden="true">↗</span></button>
 </div></header>
 <main>
   <section class="hero"><div class="wrap hero-grid">
@@ -232,4 +233,75 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 })();
 </script>
 <footer><div class="wrap"><div class="footer-inner"><span>© 2026 GyroRider Studio</span><span>Applications gratuites · Projets indépendants</span></div><div class="smallprint">Maquette de site en préparation. Ajouter les captures réelles, le fichier APK final, la version, les appareils compatibles et les consignes d’installation avant publication.</div></div></footer>
+
+<script>
+(function(){
+const map={
+en:{
+'.navlinks a:nth-child(2)':'Projects','.navlinks a:nth-child(3)':'Visual concepts','.navlinks a:nth-child(4)':'About',
+'.hero .eyebrow':'Apps built with passion','.hero h1':'Useful technology, <span>free for everyone.</span>',
+'.hero p':'Welcome to GyroRider Studio. Explore our Android projects, designed to make rides, trips and everyday tools more practical.',
+'.hero-points':'<span><b>✦</b> Original ideas</span><span><b>●</b> Made for Android</span><span><b>✓</b> Free when available</span>',
+'.hero .btn-primary':'Discover GyroRider Horn <span>↗</span>','.hero .btn-outline':'Explore projects',
+'#captures-horn .section-head .eyebrow':'App preview','#captures-horn h2':'GyroRider Horn in action','#captures-horn .section-head p':'Browse the screenshots right here. Click an image to enlarge it, then use the arrows to move between screenshots.',
+'#concepts-gemini .section-head .eyebrow':'Visual concepts to explore','#concepts-gemini h2':'Four ideas to shape the GyroRider Studio look.','#concepts-gemini .section-head p':'These four Gemini creations are gathered here so we can review them together. They are concepts for now; we can decide which ones fit the homepage, GyroRider Horn or GyroRider Speed.',
+'#concepts-gemini .gemini-card:nth-child(1) h3':'Visual concept 01','#concepts-gemini .gemini-card:nth-child(1) p':'Consider for the studio or an app presentation.',
+'#concepts-gemini .gemini-card:nth-child(2) h3':'Visual concept 02','#concepts-gemini .gemini-card:nth-child(2) p':'Compare with the other creations before choosing where it belongs.',
+'#concepts-gemini .gemini-card:nth-child(3) h3':'Visual concept 03','#concepts-gemini .gemini-card:nth-child(3) p':'Could become promotional artwork, depending on its content.',
+'#concepts-gemini .gemini-card:nth-child(4) h3':'Visual concept 04','#concepts-gemini .gemini-card:nth-child(4) p':'We can decide together whether it belongs on the homepage.',
+'#projets .section-head .eyebrow':'In development','#projets .section-head h2':'More ideas are taking shape.','#projets .section-head p':'These projects offer a glimpse into the GyroRider Studio world. They are not available for download yet.',
+'.project-speed .project-kicker':'ANDROID · RIDING','.project-speed p':'A ride companion in development, with a riding interface, GPS and customizable settings.',
+'.project-speed .project-tags span:nth-child(2)':'Routes','.project-speed .project-tags span:nth-child(3)':'Settings',
+'.project:nth-child(2) .project-kicker':'ANDROID · MEMORIES','.project:nth-child(2) p':'Keep your adventures together with routes, photos, videos and music in one memory.',
+'.project:nth-child(2) .project-tags span:nth-child(1)':'Map','.project:nth-child(2) .project-tags span:nth-child(2)':'Photos & videos',
+'.project:nth-child(3) .project-kicker':'ANDROID AUTO · MEDIA','.project:nth-child(3) p':'An experiment exploring in-car media display while taking compatibility and safety restrictions into account.',
+'.project:nth-child(3) .project-tags span:nth-child(2)':'Compatibility',
+'.closing h2':'Apps built with passion.','.closing p':'Free for everyone. More projects will arrive when they are ready.','.closing .btn':'Discover GyroRider Horn ↑',
+'.footer-inner span:nth-child(2)':'Free apps · Independent projects',
+'.smallprint':'Website preview in progress. Add the final screenshots, APK, version, compatible devices and installation instructions before release.'
+},
+fr:{
+'.navlinks a:nth-child(2)':'Nos projets','.navlinks a:nth-child(3)':'Concepts visuels','.navlinks a:nth-child(4)':'À propos',
+'.hero .eyebrow':'Des applications créées avec passion','.hero h1':'La technologie utile, <span>gratuite pour tous.</span>',
+'.hero p':'Bienvenue chez GyroRider Studio. Découvre nos projets Android, conçus pour rendre les sorties, les trajets et les petits outils du quotidien plus pratiques.',
+'.hero-points':'<span><b>✦</b> Des idées originales</span><span><b>●</b> Pensé pour Android</span><span><b>✓</b> Gratuit quand disponible</span>',
+'.hero .btn-primary':'Découvrir GyroRider Horn <span>↗</span>','.hero .btn-outline':'Voir les projets',
+'#captures-horn .section-head .eyebrow':'Aperçu de l’application','#captures-horn h2':'GyroRider Horn en images','#captures-horn .section-head p':'Parcours les captures d’écran directement ici. Clique sur une image pour l’agrandir et utilise les flèches pour passer de l’une à l’autre.',
+'#concepts-gemini .section-head .eyebrow':'Concepts visuels à explorer','#concepts-gemini h2':'Quatre idées pour donner du style à GyroRider Studio.','#concepts-gemini .section-head p':'J’ai placé ici les quatre créations Gemini pour qu’on puisse les regarder ensemble sur le site. Pour l’instant, ce sont des concepts à évaluer : on choisira ensuite lesquels utiliser pour l’accueil, GyroRider Horn ou GyroRider Speed.',
+'#concepts-gemini .gemini-card:nth-child(1) h3':'Concept visuel 01','#concepts-gemini .gemini-card:nth-child(1) p':'À évaluer pour la présentation du studio ou d’une application.',
+'#concepts-gemini .gemini-card:nth-child(2) h3':'Concept visuel 02','#concepts-gemini .gemini-card:nth-child(2) p':'À comparer avec les autres créations avant de choisir son emplacement.',
+'#concepts-gemini .gemini-card:nth-child(3) h3':'Concept visuel 03','#concepts-gemini .gemini-card:nth-child(3) p':'Possibilité d’en faire un visuel de promotion, selon son contenu.',
+'#concepts-gemini .gemini-card:nth-child(4) h3':'Concept visuel 04','#concepts-gemini .gemini-card:nth-child(4) p':'On décidera ensemble si elle mérite une place sur la page principale.',
+'#projets .section-head .eyebrow':'En développement','#projets .section-head h2':'D’autres idées prennent forme.','#projets .section-head p':'Ces projets sont présentés pour donner un aperçu de l’univers GyroRider Studio. Ils ne sont pas encore proposés au téléchargement.',
+'.project-speed .project-kicker':'ANDROID · CONDUITE','.project-speed p':'Un compagnon de trajet en préparation, avec interface de conduite, GPS et réglages personnalisables.',
+'.project-speed .project-tags span:nth-child(2)':'Trajets','.project-speed .project-tags span:nth-child(3)':'Paramètres',
+'.project:nth-child(2) .project-kicker':'ANDROID · SOUVENIRS','.project:nth-child(2) p':'Garde une trace de tes aventures en réunissant le parcours, les photos, les vidéos et la musique dans un même souvenir.',
+'.project:nth-child(2) .project-tags span:nth-child(1)':'Carte','.project:nth-child(2) .project-tags span:nth-child(2)':'Photos & vidéos',
+'.project:nth-child(3) .project-kicker':'ANDROID AUTO · MULTIMÉDIA','.project:nth-child(3) p':'Une expérimentation pour explorer l’affichage multimédia en voiture, en tenant compte des restrictions de compatibilité et de sécurité.',
+'.project:nth-child(3) .project-tags span:nth-child(2)':'Compatibilité',
+'.closing h2':'Des applications créées avec passion.','.closing p':'Gratuites pour tous. D’autres projets arriveront lorsqu’ils seront prêts.','.closing .btn':'Découvrir GyroRider Horn ↑',
+'.footer-inner span:nth-child(2)':'Applications gratuites · Projets indépendants',
+'.smallprint':'Maquette de site en préparation. Ajouter les captures réelles, le fichier APK final, la version, les appareils compatibles et les consignes d’installation avant publication.'
+}
+};
+const originals={};
+document.querySelectorAll('.lang-toggle').forEach(()=>{});
+function setLang(lang){
+const dict=map[lang];
+for(const [selector,value] of Object.entries(dict)){
+const el=document.querySelector(selector);if(!el)continue;
+if(!(selector in originals))originals[selector]=el.innerHTML;
+el.innerHTML=value;
+}
+document.documentElement.lang=lang;
+const b=document.getElementById('langToggle');b.innerHTML=lang==='fr'?'EN <span aria-hidden="true">↗</span>':'FR <span aria-hidden="true">↗</span>';
+b.setAttribute('aria-label',lang==='fr'?'Switch to English':'Passer en français');
+try{localStorage.setItem('gyroRiderLanguage',lang)}catch(e){}
+document.dispatchEvent(new CustomEvent('gyrolanguagechange',{detail:{lang}}));
+}
+let lang='fr';try{const saved=localStorage.getItem('gyroRiderLanguage');if(saved==='en'||saved==='fr')lang=saved}catch(e){}
+setLang(lang);
+document.getElementById('langToggle').addEventListener('click',()=>setLang(document.documentElement.lang==='fr'?'en':'fr'));
+})();
+</script>
 </body></html>
