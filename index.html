@@ -81,13 +81,13 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 (function(){
   const slides = {
     "gyroriderhorn/horn.JPG": [
-      {src:"gyroriderhorn/horn.JPG",alt:"Écran principal de GyroRider Horn",label:"Écran principal"},
-      {src:"gyroriderhorn/settings1.JPG",alt:"Paramètres de GyroRider Horn",label:"Paramètres — écran 1"},
-      {src:"gyroriderhorn/settings2.JPG",alt:"Paramètres de GyroRider Horn",label:"Paramètres — écran 2"}
+      {src:"gyroriderhorn/horn.JPG",alt:"Écran principal de GyroRider Horn",label:"Écran principal",tilt:-3},
+      {src:"gyroriderhorn/settings1.JPG",alt:"Paramètres de GyroRider Horn",label:"Paramètres — écran 1",tilt:0},
+      {src:"gyroriderhorn/settings2.JPG",alt:"Paramètres de GyroRider Horn",label:"Paramètres — écran 2",tilt:3}
     ],
     "gyroriderspeed/interfaces.PNG": [
-      {src:"gyroriderspeed/interfaces.PNG",alt:"Interface de GyroRider Speed",label:"Interface"},
-      {src:"gyroriderspeed/gps.PNG",alt:"Écran GPS de GyroRider Speed",label:"GPS"}
+      {src:"gyroriderspeed/interfaces.PNG",alt:"Interface de GyroRider Speed",label:"Interface",tilt:-3},
+      {src:"gyroriderspeed/gps.PNG",alt:"Écran GPS de GyroRider Speed",label:"GPS",tilt:3}
     ]
   };
   document.querySelectorAll("[data-carousel]").forEach(function(carousel){
@@ -95,9 +95,12 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
     const caption=carousel.querySelector("[data-caption]");
     const dots=carousel.querySelector("[data-dots]");
     const list=slides[image.getAttribute("src")] || [];
+    if(!list.length) return;
     let current=0;
+    let timer=null;
     function show(index){
       current=(index+list.length)%list.length;
+      image.style.setProperty("--tilt",list[current].tilt+"deg");
       image.src=list[current].src;
       image.alt=list[current].alt;
       caption.textContent=list[current].label;
@@ -107,12 +110,21 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
       const dot=document.createElement("button");
       dot.type="button";
       dot.setAttribute("aria-label","Afficher "+slide.label);
-      dot.addEventListener("click",()=>show(index));
+      dot.addEventListener("click",function(){show(index);restart();});
       dots.appendChild(dot);
     });
-    carousel.querySelector("[data-prev]").addEventListener("click",()=>show(current-1));
-    carousel.querySelector("[data-next]").addEventListener("click",()=>show(current+1));
+    function restart(){
+      if(timer) clearInterval(timer);
+      if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches && list.length>1){
+        timer=setInterval(function(){show(current+1);},4500);
+      }
+    }
+    carousel.querySelector("[data-prev]").addEventListener("click",function(){show(current-1);restart();});
+    carousel.querySelector("[data-next]").addEventListener("click",function(){show(current+1);restart();});
+    carousel.addEventListener("focusin",function(){if(timer) clearInterval(timer);});
+    carousel.addEventListener("focusout",restart);
     show(0);
+    restart();
   });
 })();
 </script>
