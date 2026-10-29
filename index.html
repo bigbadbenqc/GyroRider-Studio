@@ -86,6 +86,45 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 .mobile-menu-toggle{display:none;flex:0 0 auto;border:1px solid #72d6f677;background:#ffffff0b;color:#e9f7ff;border-radius:12px;width:42px;height:40px;font-size:21px;cursor:pointer}
 @media(max-width:760px){.nav{position:relative;flex-wrap:wrap}.mobile-menu-toggle{display:inline-grid;place-items:center;order:2}.navlinks{display:none;order:4;width:100%;flex-direction:column;gap:0;padding:8px 0 4px;border-top:1px solid #ffffff20}.navlinks.is-open{display:flex}.navlinks a{padding:12px 8px;border-radius:9px}.navlinks a:hover{background:#ffffff10}.lang-toggle{order:3;margin-left:auto}}
 @media(min-width:761px){.navlinks{display:flex!important}}
+
+/* Finition mobile : lisibilité et zones tactiles */
+@media(max-width:760px){
+  body{font-size:16px;line-height:1.6}
+  .wrap{width:min(100% - 32px,560px)}
+  section{padding:46px 0}
+  .hero{padding:42px 0 48px}
+  .hero-grid{gap:22px}
+  .hero h1{font-size:clamp(34px,9vw,46px);letter-spacing:-1.25px;line-height:1.08}
+  .hero p{font-size:16px;line-height:1.65}
+  .hero-points{margin-top:16px}
+  .actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}
+  .btn{width:100%;min-height:48px;padding:13px 16px;text-align:center}
+  .section-head{margin-bottom:22px}
+  .section-head h2{font-size:clamp(27px,7vw,34px);letter-spacing:-.65px}
+  .section-head p{font-size:15px;line-height:1.65}
+  .app-card{padding:16px;border-radius:20px;gap:14px}
+  .app-card h3{font-size:25px}
+  .carousel{margin-top:14px;padding:8px 0 16px}
+  .carousel-image{height:auto;width:auto;max-width:100%;max-height:58vh;border-radius:14px}
+  .project-carousel .carousel-image{width:100%;height:auto;max-height:48vh;min-height:180px;object-fit:contain}
+  .carousel-caption{font-size:12px;line-height:1.45}
+  .project{padding:18px;border-radius:20px}
+  .project h3{font-size:22px}
+  .project p{font-size:14px;line-height:1.7}
+  .project-tags span{font-size:11px;padding:7px 10px}
+  .project-art{min-height:100px}
+  .gemini-card{padding:12px;border-radius:20px}
+  .gemini-card img{height:auto;max-height:65vh;min-height:250px;object-fit:contain}
+  .closing{padding:38px 0}
+  .closing h2{font-size:26px;line-height:1.2}
+  .footer-inner{flex-direction:column;gap:8px}
+  .lang-toggle,.mobile-menu-toggle{min-height:42px}
+  .navlinks a{min-height:46px;display:flex;align-items:center}
+}
+@media(hover:none){
+  .project:hover,.gemini-card:hover,.btn:hover{transform:none}
+  .carousel-image:hover{transform:none;box-shadow:0 10px 26px #102f5320}
+}
 </style>
 </head>
 <body>
