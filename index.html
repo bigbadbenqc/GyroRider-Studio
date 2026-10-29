@@ -49,6 +49,37 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 .hero-app-image:hover{transform:rotate(0) translateY(-4px);box-shadow:0 34px 80px #0008,0 0 0 8px #72d6f51a}
 @media(max-width:760px){.hero-real-shot{padding:10px 0 0}.hero-app-image{max-width:290px;max-height:390px;transform:none}}
 
+
+/* Cartes de projets harmonisées */
+.projects{align-items:stretch;gap:20px}
+.project{position:relative;display:flex;flex-direction:column;min-width:0;padding:22px;border-radius:24px;box-shadow:0 12px 34px #17385a0a;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.project:hover{transform:translateY(-4px);box-shadow:0 20px 44px #17385a14;border-color:#b8d6ef}
+.project-heading{display:flex;align-items:center;gap:12px;min-height:58px}
+.project-icon{width:48px;height:48px;flex:0 0 48px;border-radius:16px;display:grid;place-items:center;font-size:24px;font-weight:900}
+.speed-icon{background:linear-gradient(145deg,#fff0c8,#ffdc78);color:#925d00}
+.recapture-icon{background:linear-gradient(145deg,#d9f7ef,#8de3cf);color:#126d63}
+.iptv-icon{background:linear-gradient(145deg,#dceaff,#9bbfff);color:#204f9e}
+.project-kicker{font-size:9px;letter-spacing:1.15px;font-weight:850;color:#73849a;line-height:1.5}
+.project h3{margin:2px 0 0;font-size:21px;letter-spacing:-.45px}
+.project p{font-size:13px;line-height:1.65;color:var(--muted);margin:12px 0 14px}
+.project-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.project-tags span{font-size:10px;font-weight:750;padding:6px 9px;border-radius:99px;background:#f0f5fa;color:#49627c;border:1px solid #e3ebf3}
+.project .status{align-self:flex-start;margin-top:auto}
+.status-experimental{background:#e9e5ff;color:#5c43a5}
+.project-art{display:flex;align-items:center;justify-content:center;gap:14px;min-height:130px;margin-top:18px;border:1px solid #e5edf5;border-radius:18px;overflow:hidden}
+.project-art span{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;font-size:21px;font-weight:800;box-shadow:0 8px 18px #17385a0b}
+.recapture-art{background:radial-gradient(ellipse at 50% 120%,#c8f4e8 0,transparent 65%),linear-gradient(135deg,#f6fffc,#eaf8f4)}
+.recapture-art span{background:#fff;color:#1a8c7a;border:1px solid #d6f0e8}
+.iptv-art{background:radial-gradient(ellipse at 50% 120%,#d7e5ff 0,transparent 70%),linear-gradient(135deg,#f8fbff,#eaf1ff)}
+.iptv-art span{background:#fff;color:#386bc0;border:1px solid #dce8fb}
+.project-carousel{max-width:100%;margin-top:16px;padding:10px 4px 16px}
+.project-carousel .carousel-image{height:220px;width:100%;background:linear-gradient(145deg,#eef5fb,#dce9f5);border:1px solid #dce8f5;border-radius:16px;box-shadow:none;padding:4px}
+.project-carousel .carousel-image:hover{transform:scale(1.035);box-shadow:0 12px 24px #17385a18}
+.project-carousel .carousel-caption{font-size:11px}
+.project-speed{border-color:#d8e7f6;background:linear-gradient(180deg,#fff,#fbfdff)}
+@media(max-width:900px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}.project-speed{grid-column:1/-1}.project-speed .project-carousel .carousel-image{height:280px}}
+@media(max-width:760px){.projects{grid-template-columns:1fr}.project-speed{grid-column:auto}.project-speed .project-carousel .carousel-image{height:250px}.project-art{min-height:110px}}
+
 </style>
 </head>
 <body>
@@ -89,16 +120,31 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
   <section id="projets" style="background:#edf4fa"><div class="wrap">
     <div class="section-head"><div class="eyebrow">En développement</div><h2>D’autres idées prennent forme.</h2><p>Ces projets sont présentés pour donner un aperçu de l’univers GyroRider Studio. Ils ne sont pas encore proposés au téléchargement.</p></div>
     <div class="projects">
-      <article class="project"><div class="emoji">⚡</div><h3>GyroRider Speed</h3>
+      <article class="project project-speed">
+        <div class="project-heading"><div class="project-icon speed-icon">⚡</div><div><div class="project-kicker">ANDROID · CONDUITE</div><h3>GyroRider Speed</h3></div></div>
         <div class="carousel project-carousel" data-carousel aria-label="Captures d’écran de GyroRider Speed">
           <img class="carousel-image" src="gyroriderspeed/interfaces.PNG" alt="Interface de GyroRider Speed">
           <div class="carousel-controls"><button type="button" data-prev aria-label="Capture précédente">‹</button><div class="carousel-caption" data-caption>Interface</div><button type="button" data-next aria-label="Capture suivante">›</button></div>
           <div class="carousel-dots" data-dots></div>
         </div>
-        <p>Un projet autour des trajets et des informations de conduite.</p><span class="status">En développement</span>
+        <p>Un compagnon de trajet en préparation, avec interface de conduite, GPS et réglages personnalisables.</p>
+        <div class="project-tags"><span>GPS</span><span>Trajets</span><span>Paramètres</span></div>
+        <span class="status">En développement</span>
       </article>
-      <article class="project"><div class="emoji">🗺️</div><h3>Recapture</h3><p>Un projet pour conserver les souvenirs d’une sortie : parcours, photos, vidéos et musique.</p><span class="status">En développement</span></article>
-      <article class="project"><div class="emoji">▶️</div><h3>IPTVCar</h3><p>Un projet expérimental autour de l’expérience multimédia en voiture, avec des limites de sécurité à respecter.</p><span class="status">Expérimental</span></article>
+      <article class="project">
+        <div class="project-heading"><div class="project-icon recapture-icon">🗺️</div><div><div class="project-kicker">ANDROID · SOUVENIRS</div><h3>Recapture</h3></div></div>
+        <div class="project-art recapture-art" aria-hidden="true"><span>📍</span><span>＋</span><span>▣</span><span>♫</span></div>
+        <p>Garde une trace de tes aventures en réunissant le parcours, les photos, les vidéos et la musique dans un même souvenir.</p>
+        <div class="project-tags"><span>Carte</span><span>Photos & vidéos</span><span>Musique</span></div>
+        <span class="status">En développement</span>
+      </article>
+      <article class="project">
+        <div class="project-heading"><div class="project-icon iptv-icon">▶</div><div><div class="project-kicker">ANDROID AUTO · MULTIMÉDIA</div><h3>IPTVCar</h3></div></div>
+        <div class="project-art iptv-art" aria-hidden="true"><span>▰</span><span>▶</span><span>▰</span></div>
+        <p>Une expérimentation pour explorer l’affichage multimédia en voiture, en tenant compte des restrictions de compatibilité et de sécurité.</p>
+        <div class="project-tags"><span>Prototype</span><span>Compatibilité</span></div>
+        <span class="status status-experimental">Expérimental</span>
+      </article>
     </div>
   </div></section>
   <section class="closing" id="contact"><div class="wrap closing-inner"><div><h2>Des applications créées avec passion.</h2><p>Gratuites pour tous. D’autres projets arriveront lorsqu’ils seront prêts.</p></div><a class="btn btn-primary" href="horn.html">Découvrir GyroRider Horn ↑</a></div></section>
