@@ -250,7 +250,7 @@ en:{
 '#concepts-gemini .gemini-card:nth-child(3) h3':'Visual concept 03','#concepts-gemini .gemini-card:nth-child(3) p':'Could become promotional artwork, depending on its content.',
 '#concepts-gemini .gemini-card:nth-child(4) h3':'Visual concept 04','#concepts-gemini .gemini-card:nth-child(4) p':'We can decide together whether it belongs on the homepage.',
 '#projets .section-head .eyebrow':'In development','#projets .section-head h2':'More ideas are taking shape.','#projets .section-head p':'These projects offer a glimpse into the GyroRider Studio world. They are not available for download yet.',
-'.project-speed .project-kicker':'ANDROID · RIDING','.project-speed p':'A ride companion in development, with a riding interface, GPS and customizable settings.',
+'.project-speed .project-kicker':'ANDROID · RIDING','.project-speed .status':'In development','.project:nth-child(2) .status':'In development','.project:nth-child(3) .status':'Experimental','.project-speed p':'A ride companion in development, with a riding interface, GPS and customizable settings.',
 '.project-speed .project-tags span:nth-child(2)':'Routes','.project-speed .project-tags span:nth-child(3)':'Settings',
 '.project:nth-child(2) .project-kicker':'ANDROID · MEMORIES','.project:nth-child(2) p':'Keep your adventures together with routes, photos, videos and music in one memory.',
 '.project:nth-child(2) .project-tags span:nth-child(1)':'Map','.project:nth-child(2) .project-tags span:nth-child(2)':'Photos & videos',
@@ -273,7 +273,7 @@ fr:{
 '#concepts-gemini .gemini-card:nth-child(3) h3':'Concept visuel 03','#concepts-gemini .gemini-card:nth-child(3) p':'Possibilité d’en faire un visuel de promotion, selon son contenu.',
 '#concepts-gemini .gemini-card:nth-child(4) h3':'Concept visuel 04','#concepts-gemini .gemini-card:nth-child(4) p':'On décidera ensemble si elle mérite une place sur la page principale.',
 '#projets .section-head .eyebrow':'En développement','#projets .section-head h2':'D’autres idées prennent forme.','#projets .section-head p':'Ces projets sont présentés pour donner un aperçu de l’univers GyroRider Studio. Ils ne sont pas encore proposés au téléchargement.',
-'.project-speed .project-kicker':'ANDROID · CONDUITE','.project-speed p':'Un compagnon de trajet en préparation, avec interface de conduite, GPS et réglages personnalisables.',
+'.project-speed .project-kicker':'ANDROID · CONDUITE','.project-speed .status':'En développement','.project:nth-child(2) .status':'En développement','.project:nth-child(3) .status':'Expérimental','.project-speed p':'Un compagnon de trajet en préparation, avec interface de conduite, GPS et réglages personnalisables.',
 '.project-speed .project-tags span:nth-child(2)':'Trajets','.project-speed .project-tags span:nth-child(3)':'Paramètres',
 '.project:nth-child(2) .project-kicker':'ANDROID · SOUVENIRS','.project:nth-child(2) p':'Garde une trace de tes aventures en réunissant le parcours, les photos, les vidéos et la musique dans un même souvenir.',
 '.project:nth-child(2) .project-tags span:nth-child(1)':'Carte','.project:nth-child(2) .project-tags span:nth-child(2)':'Photos & vidéos',
@@ -293,7 +293,7 @@ const el=document.querySelector(selector);if(!el)continue;
 if(!(selector in originals))originals[selector]=el.innerHTML;
 el.innerHTML=value;
 }
-document.documentElement.lang=lang;
+document.documentElement.lang=lang;document.title=lang==='en'?'GyroRider Studio — Free apps for everyone':'GyroRider Studio — Des applications gratuites pour tous';
 const b=document.getElementById('langToggle');b.innerHTML=lang==='fr'?'EN <span aria-hidden="true">↗</span>':'FR <span aria-hidden="true">↗</span>';
 b.setAttribute('aria-label',lang==='fr'?'Switch to English':'Passer en français');
 try{localStorage.setItem('gyroRiderLanguage',lang)}catch(e){}
