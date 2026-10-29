@@ -81,12 +81,17 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 @media(max-width:760px){.projects{grid-template-columns:1fr}.project-speed{grid-column:auto}.project-speed .project-carousel .carousel-image{height:250px}.project-art{min-height:110px}}
 
 .lang-toggle{flex:0 0 auto;border:1px solid #72d6f677;background:#ffffff0b;color:#e9f7ff;border-radius:12px;padding:9px 12px;font-size:12px;font-weight:900;letter-spacing:.8px;cursor:pointer;transition:background .2s ease,transform .2s ease}.lang-toggle:hover{background:#72d6f622;transform:translateY(-1px)}@media(max-width:760px){.nav{gap:10px}.lang-toggle{margin-left:auto;padding:8px 10px}}
+
+/* Navigation mobile accessible */
+.mobile-menu-toggle{display:none;flex:0 0 auto;border:1px solid #72d6f677;background:#ffffff0b;color:#e9f7ff;border-radius:12px;width:42px;height:40px;font-size:21px;cursor:pointer}
+@media(max-width:760px){.nav{position:relative;flex-wrap:wrap}.mobile-menu-toggle{display:inline-grid;place-items:center;order:2}.navlinks{display:none;order:4;width:100%;flex-direction:column;gap:0;padding:8px 0 4px;border-top:1px solid #ffffff20}.navlinks.is-open{display:flex}.navlinks a{padding:12px 8px;border-radius:9px}.navlinks a:hover{background:#ffffff10}.lang-toggle{order:3;margin-left:auto}}
+@media(min-width:761px){.navlinks{display:flex!important}}
 </style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
   <div class="brand"><div class="mark" aria-label="Logo GyroRider Studio">GR</div><span>GyroRider <span style="color:#79dcf6">Studio</span></span></div>
-  <nav class="navlinks"><a href="horn.html">GyroRider Horn</a><a href="#projets">Nos projets</a><a href="#concepts-gemini">Concepts visuels</a><a href="#contact">À propos</a></nav><button class="lang-toggle" type="button" id="langToggle" aria-label="Switch to English">EN <span aria-hidden="true">↗</span></button>
+  <button class="mobile-menu-toggle" type="button" id="mobileMenuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Ouvrir le menu">☰</button><nav class="navlinks" id="primaryNav"><a href="horn.html">GyroRider Horn</a><a href="#projets">Nos projets</a><a href="#concepts-gemini">Concepts visuels</a><a href="#contact">À propos</a></nav><button class="lang-toggle" type="button" id="langToggle" aria-label="Switch to English">EN <span aria-hidden="true">↗</span></button>
 </div></header>
 <main>
   <section class="hero"><div class="wrap hero-grid">
@@ -302,6 +307,13 @@ document.dispatchEvent(new CustomEvent('gyrolanguagechange',{detail:{lang}}));
 let lang='fr';try{const saved=localStorage.getItem('gyroRiderLanguage');if(saved==='en'||saved==='fr')lang=saved}catch(e){}
 setLang(lang);
 document.getElementById('langToggle').addEventListener('click',()=>setLang(document.documentElement.lang==='fr'?'en':'fr'));
+const mobileMenuToggle=document.getElementById('mobileMenuToggle');
+const primaryNav=document.getElementById('primaryNav');
+if(mobileMenuToggle&&primaryNav){
+ mobileMenuToggle.addEventListener('click',()=>{const open=primaryNav.classList.toggle('is-open');mobileMenuToggle.setAttribute('aria-expanded',String(open));mobileMenuToggle.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');mobileMenuToggle.textContent=open?'✕':'☰';});
+ primaryNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{primaryNav.classList.remove('is-open');mobileMenuToggle.setAttribute('aria-expanded','false');mobileMenuToggle.setAttribute('aria-label','Ouvrir le menu');mobileMenuToggle.textContent='☰';}));
+}
+
 })();
 </script>
 </body></html>
