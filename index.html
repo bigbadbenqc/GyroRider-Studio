@@ -26,11 +26,28 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 .lightbox-close{position:absolute;top:16px;right:20px;width:46px;height:46px;border:1px solid #ffffff55;border-radius:50%;background:#142b48;color:#fff;font-size:30px;line-height:1;cursor:pointer}.lightbox-caption{position:absolute;bottom:20px;left:20px;right:20px;text-align:center;color:#e4f4ff;font-weight:700;font-size:14px}.image-lightbox:focus{outline:none}.shot{min-height:185px;border:1.5px dashed #9eb6ce;background:linear-gradient(145deg,#f5faff,#e9f4fc);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;color:#42627f}.shot .plus{font-size:28px;color:#3b82f6;font-weight:500}.shot strong{display:block;margin:5px 0}.shot small{max-width:210px;font-size:12px}.muted-note{font-size:12px;color:#75869a;margin-top:12px}
 .gemini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}.gemini-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:18px;box-shadow:0 18px 48px #17385a12;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}.gemini-card:hover{transform:translateY(-4px);box-shadow:0 24px 54px #17385a20}.gemini-card img{display:block;width:100%;height:clamp(380px,38vw,520px);object-fit:contain;background:linear-gradient(145deg,#eef5fb,#dce9f5);border-radius:18px;cursor:zoom-in}.gemini-card h3{font-size:19px;margin:16px 5px 5px}.gemini-card p{font-size:14px;color:var(--muted);margin:0 5px 7px}.gemini-card img:focus-visible{outline:3px solid var(--blue);outline-offset:4px}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{background:white;border:1px solid var(--line);border-radius:22px;padding:22px;min-height:205px}.project .emoji{font-size:28px}.project h3{margin:10px 0 5px}.project p{font-size:14px;color:var(--muted);margin-bottom:18px}.status{display:inline-flex;border-radius:99px;background:#fff2d6;color:#8a5a00;font-size:11px;font-weight:800;padding:6px 10px}.closing{background:#e7f4fc;border-top:1px solid #d5e8f5}.closing-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}.closing h2{margin:0 0 8px;font-size:30px}.closing p{margin:0;color:var(--muted)}footer{background:#09182b;color:#c3d2e4;padding:26px 0;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.smallprint{color:#8ea5be;font-size:11px;margin-top:10px}
 @media(max-width:760px){.gemini-grid{grid-template-columns:1fr}.gemini-card img{height:clamp(300px,75vw,440px)}.navlinks{display:none}.hero{padding:55px 0}.hero-grid,.app-card{grid-template-columns:1fr}.device-stage{min-height:310px}.phone{transform:rotate(2deg) scale(.9)}.projects{grid-template-columns:1fr}.app-card{padding:20px}.closing-inner{align-items:flex-start;flex-direction:column}.features{grid-template-columns:1fr 1fr}}
+
+/* Identité visuelle renforcée — GyroRider Studio */
+.brand{gap:12px;font-size:16px;letter-spacing:.15px}
+.mark{width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,#9af0ff 0%,#59bdf8 42%,#477cf6 100%);border:1px solid #d8f8ff99;display:grid;place-items:center;color:#09213c;font-size:15px;font-weight:950;letter-spacing:-1.3px;box-shadow:0 0 0 4px #ffffff0b,0 9px 26px #3b82f655;position:relative}
+.mark:after{content:"";position:absolute;inset:4px;border:1px solid #ffffff88;border-radius:11px;pointer-events:none}
+.hero{isolation:isolate}
+.hero:after{content:"";position:absolute;z-index:-1;right:-110px;bottom:-240px;width:520px;height:520px;border:1px solid #72d6f522;border-radius:50%;box-shadow:0 0 0 44px #72d6f509,0 0 0 92px #72d6f506;pointer-events:none}
+.hero-points{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.hero-points span{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff24;background:#ffffff0b;color:#e1efff;border-radius:99px;padding:8px 11px;font-size:12px;font-weight:650}
+.hero-points b{color:#7ce2fa;font-size:13px}
+.btn{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary:hover{box-shadow:0 16px 34px #3b82f655}
+.navlinks a{transition:color .2s ease}
+.navlinks a:hover{color:#79dcf6}
+@media(max-width:760px){.brand{font-size:14px}.mark{width:40px;height:40px}.hero-points{gap:7px}.hero-points span{font-size:11px;padding:7px 9px}}
+
 </style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
-  <div class="brand"><div class="mark">✦</div><span>GyroRider <span style="color:#79dcf6">Studio</span></span></div>
+  <div class="brand"><div class="mark" aria-label="Logo GyroRider Studio">GR</div><span>GyroRider <span style="color:#79dcf6">Studio</span></span></div>
   <nav class="navlinks"><a href="horn.html">GyroRider Horn</a><a href="#projets">Nos projets</a><a href="#concepts-gemini">Concepts visuels</a><a href="#contact">À propos</a></nav>
 </div></header>
 <main>
@@ -38,6 +55,7 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
     <div><div class="eyebrow">Des applications créées avec passion</div>
       <h1>La technologie utile, <span>gratuite pour tous.</span></h1>
       <p>Bienvenue chez GyroRider Studio. Découvre nos projets Android, conçus pour rendre les sorties, les trajets et les petits outils du quotidien plus pratiques.</p>
+      <div class="hero-points" aria-label="Notre approche"><span><b>✦</b> Des idées originales</span><span><b>●</b> Pensé pour Android</span><span><b>✓</b> Gratuit quand disponible</span></div>
       <div class="actions"><a class="btn btn-primary" href="horn.html">Découvrir GyroRider Horn <span>↗</span></a><a class="btn btn-outline" href="#projets">Voir les projets</a></div>
     </div>
     <div class="device-stage" aria-label="Aperçu illustratif de l'application"><div class="glow"></div><div class="phone"><div class="screen"><div class="speaker"></div><div class="app-icon">✦</div><strong>GyroRider Horn</strong><small>Simple. Pratique. Gratuit.</small><div class="fake-control">COMMANDES DE KLAXON</div><div class="fake-pill">Interface d’aperçu</div><div class="fake-pill">Fonctions de l’application</div><small class="not-real">Illustration de présentation — pas une capture réelle.</small></div></div></div>
