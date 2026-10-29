@@ -13,7 +13,7 @@ a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}.topbar{background:rgba(
 section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section-head .eyebrow{color:#3178c9}.section-head h2{font-size:clamp(28px,3vw,40px);line-height:1.14;letter-spacing:-1px;margin:10px 0}.section-head p{color:var(--muted);font-size:16px}.app-card{background:white;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 14px 40px #17385a0b;display:grid;grid-template-columns:1fr;gap:20px;align-items:start}.app-card>div:first-child{max-width:900px}.app-card #captures{width:100%;border-top:1px solid var(--line);padding-top:20px}.app-badge{display:inline-flex;background:#e4f7ff;color:#116c9e;border-radius:99px;padding:6px 11px;font-size:12px;font-weight:800;letter-spacing:.4px}.app-card h3{font-size:30px;margin:14px 0 8px}.app-card p{color:var(--muted)}.features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0}.feature{padding:12px;border-radius:14px;background:#f2f7fc;font-size:14px;font-weight:700}.shot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .carousel{position:relative;width:100%;max-width:760px;margin:24px auto 0;background:transparent;border-radius:20px;padding:14px 10px 24px;overflow:visible}
 .carousel-image{display:block;width:auto;max-width:100%;height:390px;margin:0 auto;object-fit:contain;border-radius:12px;padding:3px;background:#0c1d35;border:2px solid #3b82f6;box-shadow:0 10px 26px #102f5320;transform:scale(1);transform-origin:center center;transition:transform .45s cubic-bezier(.2,.75,.25,1),box-shadow .45s ease,border-color .45s ease}
-.carousel-image:hover{transform:scale(1.035);border-color:#72d6f5;box-shadow:0 20px 40px #3b82f640;position:relative;z-index:2}
+.carousel-image:hover{transform:scale(1.14);border-color:#72d6f5;box-shadow:0 24px 48px #3b82f655;position:relative;z-index:4;cursor:zoom-in}
 .carousel-controls{display:flex;align-items:center;justify-content:center;gap:12px;color:#617187;padding:14px 2px 0}
 .carousel-controls button{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 .carousel-caption{font-size:13px;font-weight:700;text-align:center;flex:1;color:#526780}
@@ -21,7 +21,8 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 .project-carousel{margin-top:18px;padding:12px 8px 20px;border-radius:16px}
 .project-carousel .carousel-image{height:240px}
 .project-carousel .carousel-controls{padding-top:10px}
-@media(max-width:760px){.carousel-image{height:300px}.project-carousel .carousel-image{height:220px}}@media(prefers-reduced-motion:reduce){.carousel-image{transition:none}.carousel-image:hover{transform:scale(1)}}.shot{min-height:185px;border:1.5px dashed #9eb6ce;background:linear-gradient(145deg,#f5faff,#e9f4fc);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;color:#42627f}.shot .plus{font-size:28px;color:#3b82f6;font-weight:500}.shot strong{display:block;margin:5px 0}.shot small{max-width:210px;font-size:12px}.muted-note{font-size:12px;color:#75869a;margin-top:12px}
+@media(max-width:760px){.carousel-image{height:300px}.project-carousel .carousel-image{height:220px}}@media(hover:none){.carousel-image:hover{transform:none;cursor:pointer}}@media(prefers-reduced-motion:reduce){.carousel-image{transition:none}.carousel-image:hover{transform:scale(1)}}
+.image-lightbox{position:fixed;inset:0;z-index:1000;background:rgba(3,10,22,.94);display:none;align-items:center;justify-content:center;padding:54px 22px 64px;cursor:zoom-out;backdrop-filter:blur(8px)}.image-lightbox.is-open{display:flex}.image-lightbox img{display:block;max-width:94vw;max-height:84vh;width:auto;height:auto;object-fit:contain;border:2px solid #72d6f5;border-radius:12px;box-shadow:0 24px 80px #0009;cursor:default}.lightbox-close{position:absolute;top:16px;right:20px;width:46px;height:46px;border:1px solid #ffffff55;border-radius:50%;background:#142b48;color:#fff;font-size:30px;line-height:1;cursor:pointer}.lightbox-caption{position:absolute;bottom:20px;left:20px;right:20px;text-align:center;color:#e4f4ff;font-weight:700;font-size:14px}.image-lightbox:focus{outline:none}.shot{min-height:185px;border:1.5px dashed #9eb6ce;background:linear-gradient(145deg,#f5faff,#e9f4fc);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;color:#42627f}.shot .plus{font-size:28px;color:#3b82f6;font-weight:500}.shot strong{display:block;margin:5px 0}.shot small{max-width:210px;font-size:12px}.muted-note{font-size:12px;color:#75869a;margin-top:12px}
 .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{background:white;border:1px solid var(--line);border-radius:22px;padding:22px;min-height:205px}.project .emoji{font-size:28px}.project h3{margin:10px 0 5px}.project p{font-size:14px;color:var(--muted);margin-bottom:18px}.status{display:inline-flex;border-radius:99px;background:#fff2d6;color:#8a5a00;font-size:11px;font-weight:800;padding:6px 10px}.closing{background:#e7f4fc;border-top:1px solid #d5e8f5}.closing-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}.closing h2{margin:0 0 8px;font-size:30px}.closing p{margin:0;color:var(--muted)}footer{background:#09182b;color:#c3d2e4;padding:26px 0;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.smallprint{color:#8ea5be;font-size:11px;margin-top:10px}
 @media(max-width:760px){.navlinks{display:none}.hero{padding:55px 0}.hero-grid,.app-card{grid-template-columns:1fr}.device-stage{min-height:310px}.phone{transform:rotate(2deg) scale(.9)}.projects{grid-template-columns:1fr}.app-card{padding:20px}.closing-inner{align-items:flex-start;flex-direction:column}.features{grid-template-columns:1fr 1fr}}
 </style>
@@ -125,6 +126,23 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
     show(0);
     restart();
   });
+})();
+</script>
+<div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="Capture d’écran agrandie" tabindex="-1"><button class="lightbox-close" type="button" aria-label="Fermer l’image agrandie">×</button><img src="" alt=""><div class="lightbox-caption"></div></div>
+<script>
+(function(){
+  const lightbox=document.getElementById("imageLightbox");
+  const enlarged=lightbox.querySelector("img");
+  const label=lightbox.querySelector(".lightbox-caption");
+  const closeButton=lightbox.querySelector(".lightbox-close");
+  let previousFocus=null;
+  function closeLightbox(){lightbox.classList.remove("is-open");lightbox.setAttribute("aria-hidden","true");document.body.style.overflow="";enlarged.src="";if(previousFocus) previousFocus.focus();}
+  function openLightbox(image){previousFocus=image;enlarged.src=image.src;enlarged.alt=image.alt;label.textContent=image.alt||"Capture d’écran";lightbox.classList.add("is-open");lightbox.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";closeButton.focus();}
+  document.querySelectorAll(".carousel-image").forEach(function(image){image.setAttribute("tabindex","0");image.setAttribute("role","button");image.setAttribute("aria-label",(image.alt||"Capture d’écran")+" — cliquer pour agrandir");image.addEventListener("click",function(){openLightbox(image);});image.addEventListener("keydown",function(event){if(event.key==="Enter"||event.key===" "){event.preventDefault();openLightbox(image);}});});
+  closeButton.addEventListener("click",closeLightbox);
+  lightbox.addEventListener("click",function(event){if(event.target===lightbox) closeLightbox();});
+  document.addEventListener("keydown",function(event){if(event.key==="Escape"&&lightbox.classList.contains("is-open")) closeLightbox();});
+  lightbox.setAttribute("aria-hidden","true");
 })();
 </script>
 <footer><div class="wrap"><div class="footer-inner"><span>© 2026 GyroRider Studio</span><span>Applications gratuites · Projets indépendants</span></div><div class="smallprint">Maquette de site en préparation. Ajouter les captures réelles, le fichier APK final, la version, les appareils compatibles et les consignes d’installation avant publication.</div></div></footer>
