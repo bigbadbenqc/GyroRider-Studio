@@ -50,12 +50,12 @@ footer{background:#09182b;color:#c3d2e4;padding:26px 0;font-size:13px}.footer-in
 .project-more-copy ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;list-style:none;padding:0;margin:0}
 .project-more-copy li{background:#f0f6fc;border:1px solid #e0ebf5;border-radius:12px;padding:10px 12px;font-size:12px;font-weight:750;color:#315d8c}
 @media(max-width:760px){.project-status-section{padding:34px 0}.project-more-section{padding:40px 0}.project-more-card{grid-template-columns:1fr;gap:18px;padding:15px}.project-more-visual{min-height:205px;aspect-ratio:1.5}.project-more-copy ul{grid-template-columns:1fr 1fr}}
-/* Même cadre de capture sur Horn, Speed et ReCapture */
-.carousel{width:min(760px,100%);height:440px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px 12px 18px;background:linear-gradient(145deg,#eef5fb,#dce9f5);border:1px solid #d9e8f5;border-radius:20px;overflow:hidden}
-.carousel-image{height:390px;max-height:calc(100% - 42px);width:auto;max-width:100%;object-fit:contain;background:transparent;border:0;border-radius:12px;padding:0;box-shadow:none}
-.carousel-image:hover{transform:scale(1.04);border:0;box-shadow:0 12px 28px #3b82f633}
-.carousel-controls{padding:0}
-@media(max-width:760px){.carousel{height:350px}.carousel-image{height:300px;max-height:calc(100% - 38px)}}
+/* Même carte blanche et même cadre de captures que GyroRider Horn */
+.app-card #captures{width:100%;border:1px solid #dbe8f5;border-radius:22px;padding:clamp(10px,2vw,20px);background:radial-gradient(ellipse at center,#e6f5ff 0,#f4f8fc 68%);overflow:hidden}
+.carousel{position:relative;width:100%;max-width:760px;height:auto;margin:0 auto;background:transparent;border:0;border-radius:20px;padding:14px 10px 24px;overflow:visible}
+.carousel-image{display:block;width:auto;max-width:100%;height:390px;margin:0 auto;object-fit:contain;border-radius:12px;padding:3px;background:#0c1d35;border:2px solid #3b82f6;box-shadow:0 10px 26px #102f5320}
+.carousel-controls{padding:14px 2px 0}
+@media(max-width:760px){.carousel-image{height:300px}}
 
 /* Fiches de projets — même gabarit que la section « En savoir plus » de l’accueil */
 .project-details-section{padding:64px 0;background:radial-gradient(ellipse at 8% 0%,#eaf6ff 0,transparent 42%),#f7faff;border-top:1px solid #dce8f3}
