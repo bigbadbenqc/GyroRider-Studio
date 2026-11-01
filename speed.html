@@ -86,6 +86,40 @@ footer{background:#09182b;color:#c3d2e4;padding:26px 0;font-size:13px}.footer-in
 .detail-back:hover{background:#dcefff;text-decoration:none}
 @media(max-width:760px){.project-details-section{padding:42px 0}.project-detail,.project-detail:nth-child(even){grid-template-columns:1fr;gap:19px;padding:15px;border-radius:21px}.project-detail:nth-child(even) .detail-visual{order:0}.detail-visual{min-height:200px;aspect-ratio:1.35;padding:16px}.detail-copy{padding:0 3px 4px}.detail-copy h3{font-size:25px}.detail-copy p{font-size:14px}.detail-features{grid-template-columns:1fr 1fr}.detail-features li{font-size:11px}.speed-number{font-size:70px}}
 
+
+/* Captures harmonisées : carte blanche carrée, sans légende ni texte sous l'image */
+#captures .carousel{
+  width:min(100%,520px);
+  min-height:0;
+  margin:18px auto 0;
+  padding:18px;
+  background:#fff;
+  border:1px solid #dce8f3;
+  border-radius:24px;
+  box-shadow:0 12px 34px #17385a10;
+  overflow:hidden;
+}
+#captures .carousel-image{
+  display:block;
+  width:100%;
+  height:420px;
+  max-width:100%;
+  margin:0 auto;
+  padding:12px;
+  object-fit:contain;
+  background:#fff;
+  border:0;
+  border-radius:16px;
+  box-shadow:none;
+  transform:none;
+}
+#captures .carousel-image:hover{transform:none;box-shadow:none;border:0;cursor:zoom-in}
+#captures .carousel-controls{display:none!important}
+#captures .carousel-dots{display:none!important}
+@media(max-width:760px){
+  #captures .carousel{width:min(100%,390px);padding:12px;border-radius:20px}
+  #captures .carousel-image{height:340px;padding:8px}
+}
 </style>
 </head>
 <body>
