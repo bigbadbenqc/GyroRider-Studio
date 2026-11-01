@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243b">
+<title>Découvrir ReCapture — GyroRider Studio</title>
+<style>
+:root{--ink:#142b45;--muted:#60758b;--line:#d9e8f5;--blue:#347cf0;--cyan:#7bdcf7}
+*{box-sizing:border-box}body{margin:0;background:#f4f8fc;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+.top{background:#0b1c34;color:#fff;padding:15px 0}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-weight:900;color:white;text-decoration:none}.brand span{color:var(--cyan)}.nav-right{display:flex;align-items:center;gap:14px}.back{color:#dceafa;text-decoration:none;font-size:13px}.lang{border:1px solid #66809c;background:#173451;color:white;border-radius:12px;padding:8px 13px;font-weight:800;cursor:pointer}
+main{padding:48px 0 64px;background:radial-gradient(ellipse at 85% 0%,#dff4ff 0,transparent 40%),#f4f8fc}.intro{text-align:center;max-width:820px;margin:0 auto 26px}.eyebrow{font-size:11px;font-weight:900;letter-spacing:2px;color:#347cc4;text-transform:uppercase}.intro h1{font-size:clamp(34px,5vw,54px);line-height:1.1;letter-spacing:-1.5px;margin:10px 0}.intro p{color:var(--muted);margin:0 auto;max-width:740px}
+.poster-card{max-width:1000px;margin:0 auto;padding:clamp(12px,2.5vw,24px);background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:0 16px 44px #183b5b12}.poster-link{display:block;border-radius:17px;overflow:hidden;background:#f4f9ff;border:2px solid #d8eaff}.poster{display:block;width:100%;height:auto;object-fit:contain}.bottom{text-align:center;margin-top:26px}.back-btn{display:inline-flex;padding:12px 18px;border-radius:13px;background:#eaf4ff;border:1px solid #d5e7f8;color:#205d8c;text-decoration:none;font-weight:850}
+@media(max-width:600px){.wrap{width:calc(100% - 26px)}main{padding:34px 0 46px}.back{display:none}.poster-card{padding:9px;border-radius:19px}.poster-link{border-radius:12px}}
+</style></head>
+<body>
+<header class="top"><div class="wrap nav"><a class="brand" href="index.html">GyroRider <span>Studio</span></a><div class="nav-right"><a class="back" href="recapture.html" data-fr="← Retour à ReCapture" data-en="← Back to ReCapture">← Retour à ReCapture</a><button class="lang" id="lang">EN ↗</button></div></div></header>
+<main><div class="wrap">
+<section class="intro"><div class="eyebrow">ReCapture · Aventures & souvenirs</div><h1 data-fr="Découvrir ReCapture" data-en="Discover ReCapture">Découvrir ReCapture</h1><p data-fr="Une présentation de l’application et de ses possibilités, pour toutes vos façons de partir à l’aventure." data-en="An introduction to the app and its possibilities, for every way you choose to explore.">Une présentation de l’application et de ses possibilités, pour toutes vos façons de partir à l’aventure.</p></section>
+<div class="poster-card"><a class="poster-link" href="recapture/recappub.png" target="_blank" rel="noopener" aria-label="Ouvrir le visuel descriptif ReCapture en grand"><img class="poster" src="recapture/recappub.png" alt="Visuel descriptif bilingue de ReCapture"></a></div>
+<div class="bottom"><a class="back-btn" href="recapture.html" data-fr="← Retour à la page ReCapture" data-en="← Back to the ReCapture page">← Retour à la page ReCapture</a></div>
+</div></main>
+<script>
+(()=>{let en=false;const btn=document.getElementById('lang');btn.addEventListener('click',()=>{en=!en;document.documentElement.lang=en?'en':'fr';document.querySelectorAll('[data-fr][data-en]').forEach(el=>el.textContent=en?el.dataset.en:el.dataset.fr);btn.textContent=en?'FR ↗':'EN ↗';});})();
+</script></body></html>
