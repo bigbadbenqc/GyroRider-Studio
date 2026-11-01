@@ -78,7 +78,41 @@
 /* Même largeur de capture portrait pour ReCapture que pour Horn et Speed */
 .carousel-image{width:auto;height:390px;max-width:100%;object-fit:contain}
 @media(max-width:760px){.carousel-image{width:auto;height:300px}}
-\n.hero-actions{margin-top:24px}.discover-btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:14px;text-decoration:none;font-weight:850;color:#09213b;background:linear-gradient(135deg,#82e4f8,#4d91f5);box-shadow:0 10px 26px #020c1c35;transition:transform .2s,box-shadow .2s}.discover-btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px #020c1c55}\n</style></head><body>
+\n.hero-actions{margin-top:24px}.discover-btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:14px;text-decoration:none;font-weight:850;color:#09213b;background:linear-gradient(135deg,#82e4f8,#4d91f5);box-shadow:0 10px 26px #020c1c35;transition:transform .2s,box-shadow .2s}.discover-btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px #020c1c55}\n
+/* Captures harmonisées : carte blanche carrée, sans légende ni texte sous l'image */
+#captures .carousel{
+  width:min(100%,520px);
+  min-height:0;
+  margin:18px auto 0;
+  padding:18px;
+  background:#fff;
+  border:1px solid #dce8f3;
+  border-radius:24px;
+  box-shadow:0 12px 34px #17385a10;
+  overflow:hidden;
+}
+#captures .carousel-image{
+  display:block;
+  width:100%;
+  height:420px;
+  max-width:100%;
+  margin:0 auto;
+  padding:12px;
+  object-fit:contain;
+  background:#fff;
+  border:0;
+  border-radius:16px;
+  box-shadow:none;
+  transform:none;
+}
+#captures .carousel-image:hover{transform:none;box-shadow:none;border:0;cursor:zoom-in}
+#captures .carousel-controls{display:none!important}
+#captures .carousel-dots{display:none!important}
+@media(max-width:760px){
+  #captures .carousel{width:min(100%,390px);padding:12px;border-radius:20px}
+  #captures .carousel-image{height:340px;padding:8px}
+}
+</style></head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="index.html">GyroRider <span>Studio</span></a><div class="nav-right"><a class="back" href="index.html#projets" data-fr="← Retour aux projets" data-en="← Back to projects">← Retour aux projets</a><button class="lang" id="lang">EN ↗</button></div></div></header>
 <main><section class="hero"><div class="wrap"><div class="eyebrow" data-fr="Aventures · Parcours · Souvenirs" data-en="Adventures · Routes · Memories">Aventures · Parcours · Souvenirs</div><h1>ReCapture</h1><p data-fr="Chaque sortie devient un souvenir. ReCapture est pensé pour réunir votre trajet, vos photos, vos vidéos et votre musique, peu importe votre façon d’explorer." data-en="Turn every outing into a memory. ReCapture is designed to bring your route, photos, videos and music together, whatever your way of exploring.">Chaque sortie devient un souvenir. ReCapture est pensé pour réunir votre trajet, vos photos, vos vidéos et votre musique, peu importe votre façon d’explorer.</p><div class="tags"><span>🥾 <span data-fr="Randonnée" data-en="Hiking">Randonnée</span></span><span>🏍️ Moto</span><span>🚴 Vélo</span><span>🛞 Gyroroue / EUC</span><span>🛶 Kayak</span><span>🌲 ATPM</span></div><div class="hero-actions"><a class="discover-btn" href="recapture-description.html" data-fr="Découvrir ReCapture →" data-en="Discover ReCapture →">Découvrir ReCapture →</a></div></div></section>
 <section class="section"><div class="wrap"><h2 data-fr="Une application pour toutes vos aventures" data-en="One app for all your adventures">Une application pour toutes vos aventures</h2><p class="intro" data-fr="À pied, sur deux roues ou sur l’eau, gardez une trace de ce que vous avez vécu et retrouvez les moments forts de votre sortie." data-en="On foot, on two wheels or on the water, keep track of what you experienced and revisit the highlights of your outing.">À pied, sur deux roues ou sur l’eau, gardez une trace de ce que vous avez vécu et retrouvez les moments forts de votre sortie.</p>
