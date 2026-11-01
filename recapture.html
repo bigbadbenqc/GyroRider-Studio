@@ -80,15 +80,15 @@
 @media(max-width:760px){.carousel-image{width:auto;height:300px}}
 \n.hero-actions{margin-top:24px}.discover-btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:14px;text-decoration:none;font-weight:850;color:#09213b;background:linear-gradient(135deg,#82e4f8,#4d91f5);box-shadow:0 10px 26px #020c1c35;transition:transform .2s,box-shadow .2s}.discover-btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px #020c1c55}\n
 
-/* Reprendre exactement la carte et le cadre des captures de GyroRider Horn */
+/* Carte blanche visible, identique à celle de GyroRider Horn */
 #captures{
   width:100%;
   box-sizing:border-box;
-  background:transparent;
-  border:0;
-  border-radius:0;
-  padding:0;
-  box-shadow:none;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:28px;
+  box-shadow:0 14px 40px #17385a0b;
 }
 #captures .carousel{
   position:relative;
@@ -125,6 +125,7 @@
 #captures .carousel-controls{display:none!important}
 #captures .carousel-dots{display:none!important}
 @media(max-width:760px){
+  #captures{padding:16px;border-radius:20px}
   #captures .carousel-image{height:350px}
 }</style></head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="index.html">GyroRider <span>Studio</span></a><div class="nav-right"><a class="back" href="index.html#projets" data-fr="← Retour aux projets" data-en="← Back to projects">← Retour aux projets</a><button class="lang" id="lang">EN ↗</button></div></div></header>
