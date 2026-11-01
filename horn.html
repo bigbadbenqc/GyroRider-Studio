@@ -65,6 +65,9 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 .feature:hover{transform:translateY(-3px);border-color:#9bdcf4;box-shadow:0 10px 22px #3178c91a}
 @media(prefers-reduced-motion:reduce){.hero:before{animation:none}.btn,.app-card,.horn-image,.feature{transition:none}.btn:hover,.horn-image:hover,.feature:hover{transform:none}}
 
+
+/* Les flèches sont réservées à la visionneuse plein écran; aucun contrôle fléché dans les carrousels. */
+[data-carousel] [data-prev], [data-carousel] [data-next], .recapture-carousel .carousel-arrow { display:none !important; }
 </style>
 </head><header class="topbar"><div class="wrap nav">
   <div class="brand"><div class="mark">✦</div><span>GyroRider <span style="color:#79dcf6">Studio</span></span></div>
