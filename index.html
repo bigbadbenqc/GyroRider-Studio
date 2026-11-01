@@ -178,6 +178,9 @@ section{padding:68px 0}.section-head{max-width:700px;margin-bottom:28px}.section
 .detail-back{display:inline-flex;align-items:center;gap:7px;padding:10px 13px;border-radius:11px;background:#edf6fd;border:1px solid #d8eaf7;color:#205d8c;font-size:12px;font-weight:850;text-decoration:none;transition:background .2s ease}
 .detail-back:hover{background:#dcefff;text-decoration:none}
 @media(max-width:760px){.project-details-section{padding:42px 0}.project-detail,.project-detail:nth-child(even){grid-template-columns:1fr;gap:19px;padding:15px;border-radius:21px}.project-detail:nth-child(even) .detail-visual{order:0}.detail-visual{min-height:200px;aspect-ratio:1.35;padding:16px}.detail-copy{padding:0 3px 4px}.detail-copy h3{font-size:25px}.detail-copy p{font-size:14px}.detail-features{grid-template-columns:1fr 1fr}.detail-features li{font-size:11px}.speed-number{font-size:70px}}
+
+/* Les flèches sont réservées à la visionneuse plein écran; aucun contrôle fléché dans les carrousels. */
+[data-carousel] [data-prev], [data-carousel] [data-next], .recapture-carousel .carousel-arrow { display:none !important; }
 </style>
 </head>
 <body>
